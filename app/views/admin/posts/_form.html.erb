@@ -1,0 +1,10 @@
+<%= bootstrap_form_for [:admin, @post]  do |f| %>
+  <%= f.text_field :title %>
+  <%= f.fields_for :tag do |builder| %>
+    <%= builder.text_field :tag %>
+  <% end %>
+  請用逗號 (comma) 區分多個標籤
+  <%= f.text_area :content %>
+  <%= f.submit "Submit" %>
+  <%= link_to('back', admin_posts_url) %>
+<% end %>

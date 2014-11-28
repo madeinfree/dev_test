@@ -1,0 +1,26 @@
+<%= render partial: 'admin/common/header_nav' %>
+<div class="container">
+<%= link_to('新增文章', new_admin_post_path) %>
+</div>
+<hr>
+<div class="container">
+<table class="table">
+  <tr>
+    <td>標題</td>
+    <td>內容</td>
+    <td>標籤</td>
+    <td>動作</td>
+  </tr>
+  <% @posts.each do |f| %>
+  <tr>
+    <td><%= f.title %></td>
+    <td><%= f.content %></td>
+    <td>
+    </td>
+    <td>
+    <%= link_to('edit', edit_admin_post_path(f)) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+</div>

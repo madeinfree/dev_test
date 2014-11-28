@@ -1,0 +1,16 @@
+This is 文章模組(可當blog也可當news)
+<hr>
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>標題</td>
+      <td>內容</td>
+    </tr>
+    <% @posts.each do |f| %>
+    <tr>
+      <td><%= f.title %></td>
+      <td><%= f.content %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

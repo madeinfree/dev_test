@@ -6,7 +6,8 @@ class Admin::PostsController < Admin::BaseController
     @post = Post.new
   end
   def create
-    @post = Post.new(params[:post])
+    #railse post_params
+    @post = Post.new(post_params)
     if @post.save
       redirect_to admin_posts_url
     else
@@ -25,8 +26,8 @@ class Admin::PostsController < Admin::BaseController
     end
   end
   
-#  private
-#  def post_params
-#    params.require(:post).permit(:title, :content, :tag)
-#  end
+  private
+  def post_params
+    params.require(:post).permit(:title, :content, :terms)
+  end
 end 

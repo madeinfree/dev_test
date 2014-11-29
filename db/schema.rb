@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141128033343) do
 
   create_table "terms", force: true do |t|
     t.integer  "post_id"
-    t.string   "name"
+    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

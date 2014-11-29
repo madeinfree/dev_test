@@ -1,6 +1,10 @@
 class Admin::PostsController < Admin::BaseController
   def index 
     @posts = Post.post_filter(params[:tag])
+    #@posts = Post.all
+  end
+  def show
+    @post = Post.find(params[:id])
   end
   def new
     @post = Post.new
@@ -8,6 +12,7 @@ class Admin::PostsController < Admin::BaseController
   def create
     #railse post_params
     @post = Post.new(post_params)
+    @post.tag_list.add(params[:tag_list])
     if @post.save
       redirect_to admin_posts_url
     else
@@ -28,6 +33,6 @@ class Admin::PostsController < Admin::BaseController
   
   private
   def post_params
-    params.require(:post).permit(:title, :content, :terms)
+    params.require(:post).permit(:title, :content, :tag_list)
   end
 end 

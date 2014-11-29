@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 # back-end gem
 gem 'devise'

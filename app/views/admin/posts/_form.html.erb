@@ -2,7 +2,7 @@
   <%= f.text_field :title %>
   <%= f.text_field :tag_list %>
   請用逗號 (comma) 區分多個標籤
-  <%= f.text_area :content %>
+  <%= f.text_area :content, :class => "redactor", :rows => 40, :cols => 120%>
   <%= f.submit "Submit" %>
   <%= link_to('back', admin_posts_url) %>
 <% end %>

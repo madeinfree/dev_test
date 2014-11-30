@@ -4,6 +4,7 @@ gem 'bootstrap-sass-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap_form'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'redactor-rails'
 
 # back-end gem
 gem 'devise'

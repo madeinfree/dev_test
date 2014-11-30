@@ -1,4 +1,5 @@
 <%= @post.title %>
+<%= @post.content %>
 <% @post.tag_list.each do |f| %>
 <%= link_to(f, admin_posts_url(tag: f)) %><br>
 <% end %>

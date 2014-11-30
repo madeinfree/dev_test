@@ -106,6 +106,10 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    redactor-rails (0.4.5)
+      devise
+      mime-types
+      orm_adapter
     redcarpet (3.2.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
@@ -162,6 +166,7 @@ DEPENDENCIES
   mysql2
   nokogiri
   rails
+  redactor-rails
   redcarpet
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

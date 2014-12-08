@@ -8,7 +8,7 @@ This is 文章模組(可當blog也可當news)
     </tr>
     <% @posts.each do |f| %>
     <tr>
-      <td><%= f.title %></td>
+      <td><%= link_to(f.title, post_path(f)) %></td>
       <td><%= f.content %></td>
     </tr>
     <% end %>

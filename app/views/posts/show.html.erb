@@ -1,0 +1,7 @@
+<%= link_to('back', posts_url) %>
+<hr>
+<%= @post.title %>
+<%= @post.content.html_safe %>
+<% @post.tag_list.each do |f| %>
+<%= link_to(f, admin_posts_url(tag: f)) %><br>
+<% end %>

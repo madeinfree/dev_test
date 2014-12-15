@@ -1,0 +1,21 @@
+<%= link_to('文章', posts_url) %> |
+<%= link_to('產品', products_url) %>
+<div class="container">
+<table class="table">
+  <tr>
+    <td>產品名稱</td>
+    <td>價格</td>
+    <td>圖片</td>
+  </tr>
+  <% @products.each do |f| %>
+  <tr>
+    <td><%= link_to(f.name, product_path(f)) %></td>
+    <td><%= f.price %></td>
+    <td><%= link_to product_path(f) do %>
+      <%= image_tag (f.image_url(:thumb)) %>
+    <% end %></td>
+    <!-- <a href="show/:id><img></img></a>" -->
+  </tr>
+  <% end %>
+</table>
+</div>

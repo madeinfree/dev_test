@@ -10,7 +10,6 @@ class Admin::PostsController < Admin::BaseController
     @post = Post.new
   end
   def create
-    #railse post_params
     @post = Post.new(post_params)
     @post.tag_list.add(params[:tag_list])
     if @post.save

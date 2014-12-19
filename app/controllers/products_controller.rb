@@ -7,18 +7,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
   def add_to_cart
-    if session[:cart].nil?
-       @cart = Cart.create
-       session[:cart]= @cart.id
-    end
-    #find Product, get/pid, prince/
-    @product = Product.find(params[:id])
-    session[:pid] = @product.id
-    session[:price] = @product.price
-    #add to cart_items/cart.id, pid, prince/
-    @add_item = CartItem.create(:cart_id => session[:cart], :product_id => session[:pid], :prince => session[:price])
-    
+    current_cart
     #show Cart
-    redirect_to products_url
+    #redirect_to products_url
   end
 end

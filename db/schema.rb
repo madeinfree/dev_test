@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20141219061923) do
 
   create_table "cart_items", force: true do |t|
+    t.integer  "cart_id"
+    t.integer  "product_id"
     t.integer  "quantity"
     t.integer  "prince"
     t.datetime "created_at"

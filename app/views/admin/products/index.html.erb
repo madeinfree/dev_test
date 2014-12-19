@@ -9,6 +9,7 @@
     <td>產品名稱</td>
     <td>價格</td>
     <td>圖片</td>
+    <td>庫存</td>
     <td>編輯</td>
     <td>刪除</td>
   </tr>
@@ -17,6 +18,7 @@
     <td><%= f.name %></td>
     <td><%= f.price %></td>
     <td><%= image_tag f.image_url(:thumb) %></td>
+    <td><%= f.stock %></td>
     <td><%= link_to('edit', edit_admin_product_path(f)) %></td>
     <td><%= link_to('delete', admin_product_path(f), :method => 'delete') %></td>
   </tr>

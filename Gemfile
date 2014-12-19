@@ -6,6 +6,7 @@ gem 'bootstrap_form'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'redactor-rails'
 gem 'google-analytics-rails'
+gem 'activeuuid'
 
 # back-end gem
 gem 'devise'

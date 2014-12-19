@@ -3,18 +3,22 @@
 <div class="container">
 <table class="table">
   <tr>
+    <td>id</td>
     <td>產品名稱</td>
     <td>價格</td>
     <td>圖片</td>
+    <td></td>
   </tr>
   <% @products.each do |f| %>
   <tr>
+    <td><%= f.id %></td>
     <td><%= link_to(f.name, product_path(f)) %></td>
     <td><%= f.price %></td>
     <td><%= link_to product_path(f) do %>
       <%= image_tag (f.image_url(:thumb)) %>
     <% end %></td>
     <!-- <a href="show/:id><img></img></a>" -->
+    <td><%= link_to('加入購物車','', :class => "btn btn-default") %></td>
   </tr>
   <% end %>
 </table>

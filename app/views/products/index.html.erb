@@ -18,14 +18,13 @@
       <%= image_tag (f.image_url(:thumb)) %>
     <% end %></td>
     <!-- <a href="show/:id><img></img></a>" -->
-    <td><%= link_to('加入購物車', add_to_cart_product_path(f.id), method: :post, :class => "btn btn-default") %></td>
+    <td><%= link_to('加入購物車', add_to_cart_product_path(f), method: :post, :class => "btn btn-default") %></td>
   </tr>
   <% end %>
 </table>
 <hr>
-InCart:
+InCart:<%= current_cart.id %><br>
 <% @carts.each do |item| %>
-  <%= item.cart_id %>
-  <%= item.product_id %>
+  product_id -><%= item.product_id %><br>
 <% end %>
 </div>

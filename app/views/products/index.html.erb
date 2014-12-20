@@ -23,8 +23,9 @@
   <% end %>
 </table>
 <hr>
-InCart:<%= current_cart.id %><br>
+In[ <%= current_cart.id %> ]Cart list:<br>
 <% @carts.each do |item| %>
   product_id -><%= item.product_id %><br>
+  product_quantity -><%= item.quantity %><br>
 <% end %>
 </div>

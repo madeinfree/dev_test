@@ -23,9 +23,7 @@
   <% end %>
 </table>
 <hr>
-In[ <%= current_cart.id %> ]Cart list:<br>
-<% @carts.each do |item| %>
-  product_id -><%= item.product_id %><br>
-  product_quantity -><%= item.quantity %><br>
-<% end %>
+在<%= current_cart.id %>號購物車中
+有<%= cart_product_quantity(current_cart.id) %>樣商品 <br>
+<%= link_to('查看購物車',) %>
 </div>

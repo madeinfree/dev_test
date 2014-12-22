@@ -10,4 +10,14 @@ class Cart < ActiveRecord::Base
     cart_item.quantity = cart_item.quantity + quantity
     cart_item.save
   end  
+  def total_price(cart_id)
+    #找出這台車有的產品及產品價格(test)
+    #items.each(){ |item| item.price}
+    #找出數量(test)
+    #artItem.where(product_id: 2,cart_id: 5).take!.quantity
+
+    #運算
+    items.inject(0){|sum, item| sum + item.price * CartItem.where("product_id = ? AND cart_id = ?", item.id, cart_id).take!.quantity }
+    
+  end
 end

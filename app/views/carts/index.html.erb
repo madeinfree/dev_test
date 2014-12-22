@@ -15,12 +15,11 @@ tip:明細確認page, 可直接checkout.<br>
   <tr>
     <td><%= item.id %></td>
     <td><%= show_product_name(item.product_id) %></td>
-    <td><%= show_product_price(item.product_id) %></td>
     <td><%= item.quantity %></td>
+    <td><%= show_product_price(item.product_id) %></td>
     <td>刪除商品 / 更新數量</td>
   </tr>
   <% end %>
 </table>
-
 </div>
-
+<%= show_cart_total_price(current_cart) %>

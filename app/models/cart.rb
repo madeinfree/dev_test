@@ -15,9 +15,9 @@ class Cart < ActiveRecord::Base
     #items.each(){ |item| item.price}
     #找出數量(test)
     #artItem.where(product_id: 2,cart_id: 5).take!.quantity
-
     #運算
     items.inject(0){|sum, item| sum + item.price * CartItem.where("product_id = ? AND cart_id = ?", item.id, cart_id).take!.quantity }
     
+    #note利用.map & 把quantity拆成另一個method
   end
 end

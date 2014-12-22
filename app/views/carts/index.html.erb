@@ -1,0 +1,26 @@
+<div class="container">
+tip:明細確認page, 可直接checkout.<br>
+<%= link_to('繼續購物', products_url) %>
+<hr>
+<table class="table table-bordered">
+  <tr>
+    <td>產品id</td>
+    <td>產品名稱</td>
+    <td>數量</td>
+    <td>價格</td>
+    <td>動作</td>
+  </tr>
+  <% @carts.each do |item| %>
+
+  <tr>
+    <td><%= item.id %></td>
+    <td><%= show_product_name(item.product_id) %></td>
+    <td><%= show_product_price(item.product_id) %></td>
+    <td><%= item.quantity %></td>
+    <td>刪除商品 / 更新數量</td>
+  </tr>
+  <% end %>
+</table>
+
+</div>
+
